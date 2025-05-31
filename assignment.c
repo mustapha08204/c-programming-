@@ -18,9 +18,20 @@ int main() {
                 sentence[i] = ch + 1;
             }
         }
-        // Non-letter characters remain unchanged
+        
+        else if (isdigit(ch)) {
+            if (ch == '9') {
+                sentence[i] = '0';
+            } else {
+                sentence[i] = ch + 1;
+            }
+        }
+        
+        else if (ch == ' ') {
+            sentence[i] = '_'; 
+        }
     }
-    // Print encrypted sentence
+   
     printf("Encrypted sentence: %s", sentence);
     return 0;
 }
