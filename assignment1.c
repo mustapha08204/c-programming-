@@ -8,7 +8,7 @@ int main() {
     // Encrypt each character
     for (int i = 0; sentence[i] != '\0'; i++) {
         char ch = sentence[i];
-        // Check if character is a letter
+       
         if (isalpha(ch)) {
             if (ch == 'z') {
                 sentence[i] = 'a';
@@ -26,12 +26,17 @@ int main() {
                 sentence[i] = ch + 1;
             }
         }
+        else if (ch == '.') {
+            sentence[i] = '!';
+        } 
         
+        else if (ch == ',') {
+            sentence[i] = '?';
+        }
         else if (ch == ' ') {
             sentence[i] = '_'; 
         }
     }
-   
     printf("Encrypted sentence: %s", sentence);
     return 0;
 }

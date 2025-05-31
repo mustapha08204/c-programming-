@@ -1,0 +1,9 @@
+It
+counts
+the
+number
+of
+words
+as
+it
+goes.
